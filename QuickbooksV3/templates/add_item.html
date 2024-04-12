@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+<div style="width:100%; height: 70vh; display:grid; place-items:center;">
+  <div class="content-section">
+    <h1 style="color:white; font-family: 'Montserrat', sans-serif;">Item adder 3000</h1>
+    <form action="" method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+          {{ form.title.label(class="form-control-label") }}
+          
+          {% if form.title.errors %}
+            {{ form.title(required=False, class="form-control form-control-lg is-invalid form-input", id='title')}}
+            <div class="invalid-feedback">
+              {% for error in form.title.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.title(required=False, class="form-control form-control-lg form-input", id='title') }}
+          {% endif %}
+          <select name="Default selector" id="defaultSelector" class="defaultSelector">
+            <option value="ignore" class="option">Defaults</option>
+            <option value="kidskey" class="option">KidsKey</option>
+            <option value="english" class="option">English with Sandra</option>
+            <option value="math" class="option">Math with Tom</option>
+            <option value="spanish" class="option">Spanish with Sheila</option>
+            <option value="history" class="option">History with Mr. Howard</option>
+            <option value="earthscience" class="option">Earth Science</option>
+            <option value="swim" class="option">Swim team</option>
+            
+          </select>
+          
+        </div>
+        <div class="form-group">
+          {{ form.price.label(class="form-control-label") }}
+          
+          {% if form.price.errors %}
+            {{ form.price(required=False, class="form-control form-control-lg is-invalid form-input", id="price")}}
+            <div class="invalid-feedback">
+              {% for error in form.price.errors %}
+                <span>{{ error }}</span>
+              {% endfor %}
+            </div>
+          {% else %}
+            {{ form.price(required=False, class="form-control form-control-lg form-input") }}
+          {% endif %}
+        </div>
+      <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info addBtn") }}
+      </div>
+    </form>
+</div>
+<script>
+  var selector = document.getElementById('defaultSelector')
+  var title = document.getElementById('title')
+  var price = document.getElementById('price')
+  selector.onchange = function() {
+    if(selector.value != "ignore"){
+      if(selector.value == "kidskey"){
+        title.value = "KidsKey"
+        price.value = "2.00"
+      }else if(selector.value == "english"){
+        title.value = "English with Sandra"
+        price.value = "3.00"
+      }else if(selector.value == "math"){
+        title.value = "Math with Tom"
+        price.value = "2.00"
+      }else if(selector.value == "spanish"){
+        title.value = "Spanish with Sheila"
+        price.value = "2.00"
+      }else if(selector.value == "history"){
+        title.value = "History with Mr. Howard"
+        price.value = "2.00"
+      }else if(selector.value == "earthscience"){
+        title.value = "Earth Science"
+        price.value = "2.00"
+      }else if(selector.value == "swim"){
+        title.value = "Swim"
+        price.value = "1.50"
+      }
+    }
+  }
+  
+</script>
+{% endblock %}

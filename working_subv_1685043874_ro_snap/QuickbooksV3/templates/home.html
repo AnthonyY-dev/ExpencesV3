@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section" style="display:grid; place-items: center; margin-top: 30px;">
+  <h1 style="font-family:'Monserrat', sans-serif; color:white; font-weight: 700;">Statistics</h1>
+  <h1 style="font-family: 'Montserrat', sans-serif; color:white;">Total: {{ total }}</h1>
+  <h1 style="font-family: 'Montserrat', sans-serif; color:white;">Paid: {{ paid }}</h1>
+  <h1 style="font-family: 'Montserrat', sans-serif; color:white;">Owed: {{ owed }}</h1>
+</div>
+<div class="log_entry_list" style="margin-bottom:20px;">
+  {% if items != [] %}
+  <div class="log_entry">
+    <div class="title" style="color:white;">Title</div>
+    <div class="price" style="color:white;">Price</div>
+    <div class="date" style="color:white;">Date</div>
+    
+  </div>
+  {% for item in items %}
+  
+  <div class="log_entry">
+    <div class="title"><a href="{{ url_for('entryPage', id=item[3]) }}" class="title-text" style="color:white;">{{ item[0] }}</a></div>
+    <div class="price">{{ item[1] }}$</div>
+    <div class="date">{{ item[2] }}</div>
+    
+  </div>
+  {% endfor %}
+
+  {% else %}
+      <h1 style="margin:none; font-family: 'Montserrat', sans-serif;">The item list is currently empty.</h1>
+  {% endif %}
+
+</div>
+{% endblock %}

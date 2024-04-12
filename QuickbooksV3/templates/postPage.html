@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+  {% if post %}
+  <a href="{{ url_for('home') }}" class="btnBack">Back</a>
+  <div class="log_entry" style="margin: auto; margin-top: 30vh;">
+    <div class="title"><a href="{{ url_for('entryPage', id=post[3]) }}" class="title-text">{{ post[0] }}</a></div>
+    <div class="price">{{ post[1] }}</div>
+    <div class="date">{{ post[2] }}</div>
+  </div>
+  <div class="btns">
+    <a style="margin-left: auto; margin-right:auto;" class="deleteBtn btn" href="{{url_for('deleteEntry', id=post[3])}}">Delete</a>
+    <a style="margin-left: auto; margin-right:auto;" class="updateBtn btn" href="{{url_for('updateEntry', id=post[3])}}">Update</a>
+  </div>
+  {% endif %}
+{% endblock %}

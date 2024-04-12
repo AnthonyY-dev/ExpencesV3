@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+/* Navbar */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
+  display: grid;
+}
+
+.nav_li_a_btn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+.nav_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: #191a1e;
+}
+
+.nav_logo{
+  background-color: #191a1e;
+  color: #FFFFFF;
+  font-family: 'Comic Sans MS', cursive;
+}
+.nav_logo{
+cursor: pointer;
+}
+.nav_links{
+  list-style: none;
+}
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+  list-style-type: none; /* Add this line */
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0;
+}
+.nav_links li a:hover{
+  color: #0088a9;
+}
+.btn-contact{
+  padding: 9px 25px;
+  background-color: rgba(0,136,169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0;
+}
+.btn-contact:hover{
+  background-color: rgba(0,136,169,0.8);
+} 
+/* Home.html */
+.log_entry_list{
+  background-color: #42434c;
+  margin-left: auto;
+  margin-right: auto;
+  width: 750px;
+  margin-top: 35px;
+  border-radius: 10px;
+  display: grid;
+	place-items: center;
+  border: 4px solid #181819;
+}
+.log_entry{
+  background-color: #3a3b3e;
+  width: 85%;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.title, .price, .date{
+  flex-grow: 1;
+  flex-basis: 0;
+  /* background-color: white; */
+  height: 100%;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+  font-family: 'Montserrat';
+}
+
+.title-text{
+  font-size: 20px;
+  color: white;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.title-text:hover{
+  color: rgba(0,136,169,1);
+}
+
+.title a{
+  color: inherit;
+  text-decoration: none;
+}
+.price{
+  color: #00FF00;
+  font-weight: 700;
+}
+.date{
+  color: #18c5f1;
+}
+.content-section{
+  background: #2a2b2e;
+  padding: 10px 20px;
+  border: 4px solid #181819;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 50%;
+  margin: auto;
+  
+}
+.form-group{
+  border: rgb(31, 31, 31) 5px solid;
+  margin-bottom: 10px;
+  background-color: rgb(86, 85, 85);
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+}
+.form-input{
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+}
+.addBtn{
+  background-color: #00FF00;
+  border:none;
+  border-radius: 20px;
+  height: 35px;
+  width: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 0.7s;
+}
+.addBtn:hover{
+  background-color: #068406;
+}
+.msgFlashed{
+  width: 75%;
+  
+  height: 20px;
+}
+/* Fake Bootstrap */
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  width: 80%;
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right: auto;
+  display:grid;
+  place-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+.alert-secondary {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+.alert-success {
+  color: #155724;
+  background-color: #34bb54;
+  border-color: #105720;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+.alert-light {
+  color: #818182;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
+}
+.alert-dark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+}
+/* Log entry page */
+
+.updateBtn{
+  background-color: rgb(232, 232, 19);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  width:  62px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  display: flex;
+}
+.updateBtn:hover{
+  background-color: rgb(161, 161, 25);
+}
+.deleteBtn{
+  background-color: rgb(246, 26, 26);
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 30px;
+  width: 53px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  display: flex;
+}
+.deleteBtn:hover{
+  background-color: rgb(154, 29, 29);
+}
+.btns{
+  display: flex;
+}
+.btn{
+  text-decoration: none;
+  color: inherit;
+}
+.editBtn{
+  background-color: #e1ff00;
+  border:none;
+  border-radius: 20px;
+  height: 35px;
+  width: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background-color 0.7s;
+  color: black;
+}
+.editBtn:hover{
+  background-color: #909f1c;
+}
+.priceListText{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+.priceListTextGreen{
+  color: limegreen;
+}
+.btnBack{
+  border: 1px solid #007bff;
+  width: 40px;
+  border-radius: 5px;
+  color: #007bff;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  transition: background-color  0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.btnBack:hover{
+  background-color: #007bff;
+  color: white;
+}
+.defaultSelector{
+  margin-top:10px;
+  padding:5px;
+  text-align:center;
+  border-radius: 25px;
+  background:none;
+  border: 2px #00aaff solid;
+  color: #00aaff;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+}
+.defaultSelector:focus{
+  outline:none;
+  border: 2px #00aaff solid;
+}
+.defaultSelector:hover{
+  background-color: #00aaff;
+  color:white;
+}
+.option{
+  background-color: #00aaff;
+  color:white;
+}
+.option:focus{
+outline:none;
+}
